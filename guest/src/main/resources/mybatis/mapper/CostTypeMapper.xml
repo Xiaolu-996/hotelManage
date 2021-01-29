@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guest.mapper.CostTypeMapper">
+
+    <select id="getCostTypeByName" parameterType="string" resultType="costType">
+        select * from cost_type where `name` = #{name};
+    </select>
+    <select id="getAllCostType" resultType="costType">
+        select * from cost_type where `name` not like "%租金" and `name` not like "%定金";
+    </select>
+
+    <delete id="removeByName" parameterType="string">
+        delete from cost_type where `name` = #{name};
+    </delete>
+</mapper>

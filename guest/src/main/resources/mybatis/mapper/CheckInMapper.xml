@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guest.mapper.CheckInMapper">
+
+    <select id="getValidCheckIns" resultType="checkIn"  parameterType="java.sql.Timestamp">
+        select * from check_in where state = 1 and
+        ((from_time > #{fromTime} and to_time &lt; #{toTime})
+        or (from_time >  #{fromTime} and from_time &lt; #{toTime})
+        or (to_time > #{fromTime} and to_time &lt; #{toTime})
+        or (from_time &lt; #{fromTime} and to_time> #{toTime}) );
+    </select>
+
+    <select id="getValidCheckIns1" resultType="checkIn"  parameterType="java.sql.Timestamp">
+        select * from check_in where state = 1 and
+        ((from_time > #{fromTimeT} and to_time &lt; #{toTimeT})
+        or (from_time >  #{fromTimeT} and from_time &lt; #{toTimeT})
+        or (to_time > #{fromTimeT} and to_time &lt; #{toTimeT})
+        or (from_time &lt; #{fromTimeT} and to_time> #{toTimeT}) );
+    </select>
+
+    <select id="getNum" parameterType="string" resultType="int">
+        select count(*) from check_in where room_id = #{roomId} and state = 1;
+    </select>
+
+    <select id="getByIdCard" parameterType="string" resultType="checkIn">
+        select * from check_in where guest_id_card = #{idCard} order by to_time desc;
+    </select>
+
+    <delete id="removeByIdCard" parameterType="string">
+        delete from check_in where guest_id_card = #{idCard};
+    </delete>
+
+    <delete id="removeByRoomId" parameterType="string">
+        delete from check_in where room_id = #{id};
+    </delete>
+</mapper>

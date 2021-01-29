@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guest.mapper.GuestMapper">
+
+    <select id="getByIdCard" parameterType="String" resultType="guest">
+        select * from guest where id_card like "%"#{idCard}"%";
+    </select>
+
+    <select id="getByContact" parameterType="String" resultType="guest">
+        select * from guest where contact like "%"#{contact}"%";
+    </select>
+
+    <select id="getByName" parameterType="String" resultType="guest">
+        select * from guest where `name` like "%"#{name}"%";
+    </select>
+
+</mapper>

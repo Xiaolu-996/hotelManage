@@ -1,0 +1,101 @@
+# 整合mybatis
+mybatis-plus:
+ mapper-locations: classpath:mybatis/mapper/*.xml
+ type-aliases-package: com.guest.pojo
+# 连接数据库
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    username: root
+    password: 981028
+    url: jdbc:mysql://localhost:3309/guest?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+#    url: jdbc:mysql://10.0.0.3:3306/guest?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    #Spring Boot 默认是不注入这些属性值的，需要自己绑定
+    #druid 数据源专有配置
+    druid:
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        reset-enable: true
+        login-username: admin
+        login-password: 123456
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1 FROM DUAL
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        #配置监控统计拦截的filters，stat:监控统计、log4j：日志记录、wall：防御sql注入
+        #如果允许时报错  java.lang.ClassNotFoundException: org.apache.log4j.Priority
+        #则导入 log4j 依赖即可，Maven 地址： https://mvnrepository.com/artifact/log4j/log4j
+        filters: stat,wall,log4j
+        maxPoolPreparedStatementPerConnectionSize: 20
+        useGlobalDataSourceStat: true
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      fail-on-empty-beans: false
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+#  redis:
+#    host: 127.0.0.1
+    #bit↓
+#    host: redis
+#    password: 213926
+#    database: 0
+#    port: 6379
+    # timeout: 10S
+    # ttl: 30
+
+logging:
+  level:
+    com.bit.mapper: debug
+server:
+  #max-http-header-size: 65546
+  servlet:
+    context-path: /
+  port: 80
+  tomcat:
+    uri-encoding: UTF-8
+
+
+# jwt的私钥和失效时间
+jwtutill:
+  key: bitwechat
+  ttl: 7200000
+
+passwordutil:
+  encryptablesalt: SGxw#hkYlfc$#p^PZ*v$u26s
+  key: HVFe8r%4NIx#Ny*0u!rJmw&kuE!iF4#*nh4E0dp2rj
+
+interceptorconfig:
+  excludePathPatterns:
+    - /swagger-ui.html
+    - /webjars/**
+    - /swagger-resources/**
+    - /frontLogin
+    - /backgroundLogin
+    - /error
+    - /
+    - /csrf
+    - /index/**
+    - /favicon.ico
+    - /static/**
+    - /js/**
+    - /css/**
+    - /img/**
+    - /fonts/**
+

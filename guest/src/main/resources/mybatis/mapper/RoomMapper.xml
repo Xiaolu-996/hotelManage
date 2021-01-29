@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guest.mapper.RoomMapper">
+    <select id="getRoomsByType" parameterType="string" resultType="room">
+        select * from room where rank_id in (select id from room_rank where rank = #{rank});
+    </select>
+    <delete id="removeByRoomId" parameterType="string">
+        delete from cost where room_id = #{roomId};
+    </delete>
+</mapper>
