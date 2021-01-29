@@ -7,6 +7,7 @@
 </p>
 
 
+
 ## 1.前言
 
 **hotelMange** 是由于学校的数据库课设诞生，前后端由我和另一个小伙伴独立开发完成
@@ -50,50 +51,50 @@ npm run serve
 
 ### 3.1 数据库结构
 
-![sql](https://static.looni.ink/typora/sql.png)
+![sql](https://cdn.jsdelivr.net/gh/looniink/image/sql.png)
 
 ### 3.2 登录界面
 
-![login](https://static.looni.ink/typora/login.png)
+![login](https://cdn.jsdelivr.net/gh/looniink/image/hotellogin.png)
 
 
 
 ### 3.3 预定界面
 
-![book](https://static.looni.ink/typora/book.png)
+![book](https://cdn.jsdelivr.net/gh/looniink/image/book.png)
 
 ### 3.4 客户界面
 
-### ![client](https://static.looni.ink/typora/client.png)
+### ![client](https://cdn.jsdelivr.net/gh/looniink/image/client.png)
 
 ## 4. 采用技术
 
-|      技术      |           说明            |                             官网                             |
-| :------------: | :-----------------------: | :----------------------------------------------------------: |
-|   SpringBoot   |          MVC框架          | [ https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot) |
-|  MyBatis-Plus  |          ORM框架          |                   https://mp.baomidou.com/                   |
-|   Swagger-UI   |       接口文档生成工具        | [ https://github.com/swagger-api/swagger-ui](https://github.com/swagger-api/swagger-ui) |
-|     Screw    |     数据库文档生成工具      |               https://github.com/pingfangushi/screw              |
-|     Druid      |       数据库连接池        | [ https://github.com/alibaba/druid](https://github.com/alibaba/druid) |
-|      JWT       |        JWT登录支持        |                 https://github.com/jwtk/jjwt                 |
-|     SLF4J      |         日志框架          |                    http://www.slf4j.org/                     |
-|     Lombok     |     简化对象封装工具      | [ https://github.com/rzwitserloot/lombok](https://github.com/rzwitserloot/lombok) |
-|     Nginx      |  HTTP和反向代理web服务器  |                      http://nginx.org/                       |
-|        Vue.js         |                前端框架                 |                      https://vuejs.org/                      |
-|      Vue-router       |                路由框架                 |                  https://router.vuejs.org/                   |
-|         Vuex          |            全局状态管理框架             |                   https://vuex.vuejs.org/                    |
-|        Element        |               前端ui框架                |    [ https://element.eleme.io](https://element.eleme.io/)    |
-|         Axios         |              前端HTTP框架               | [ https://github.com/axios/axios](https://github.com/axios/axios) |
+|     技术     |          说明           |                             官网                             |
+| :----------: | :---------------------: | :----------------------------------------------------------: |
+|  SpringBoot  |         MVC框架         | [ https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot) |
+| MyBatis-Plus |         ORM框架         |                   https://mp.baomidou.com/                   |
+|  Swagger-UI  |    接口文档生成工具     | [ https://github.com/swagger-api/swagger-ui](https://github.com/swagger-api/swagger-ui) |
+|    Screw     |   数据库文档生成工具    |            https://github.com/pingfangushi/screw             |
+|    Druid     |      数据库连接池       | [ https://github.com/alibaba/druid](https://github.com/alibaba/druid) |
+|     JWT      |       JWT登录支持       |                 https://github.com/jwtk/jjwt                 |
+|    SLF4J     |        日志框架         |                    http://www.slf4j.org/                     |
+|    Lombok    |    简化对象封装工具     | [ https://github.com/rzwitserloot/lombok](https://github.com/rzwitserloot/lombok) |
+|    Nginx     | HTTP和反向代理web服务器 |                      http://nginx.org/                       |
+|    Vue.js    |        前端框架         |                      https://vuejs.org/                      |
+|  Vue-router  |        路由框架         |                  https://router.vuejs.org/                   |
+|     Vuex     |    全局状态管理框架     |                   https://vuex.vuejs.org/                    |
+|   Element    |       前端ui框架        |    [ https://element.eleme.io](https://element.eleme.io/)    |
+|    Axios     |      前端HTTP框架       | [ https://github.com/axios/axios](https://github.com/axios/axios) |
 
 ## 5.开发工具
 
-|     工具     |       说明        |                             官网                             |
-| :----------: | :---------------: | :----------------------------------------------------------: |
-|     IDEA     |    Java开发IDE    |           https://www.jetbrains.com/idea/download            |
-|   WebStorm   |    前端开发IDE    |             https://www.jetbrains.com/webstorm/              |
-|   X-shell    | Linux远程连接工具 |               https://xshell.en.softonic.com/                |
-|    X-ftp     | Linux文件传输工具 |         https://www.netsarang.com/zh/all-downloads/          |
-|   Navicat   |  数据库连接工具   |               https://www.navicat.com.cn/              |
+|   工具   |       说明        |                    官网                     |
+| :------: | :---------------: | :-----------------------------------------: |
+|   IDEA   |    Java开发IDE    |   https://www.jetbrains.com/idea/download   |
+| WebStorm |    前端开发IDE    |     https://www.jetbrains.com/webstorm/     |
+| X-shell  | Linux远程连接工具 |       https://xshell.en.softonic.com/       |
+|  X-ftp   | Linux文件传输工具 | https://www.netsarang.com/zh/all-downloads/ |
+| Navicat  |  数据库连接工具   |         https://www.navicat.com.cn/         |
 
 ## 6.致谢
 
