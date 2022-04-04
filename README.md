@@ -22,11 +22,11 @@
 
 ### 2.2 guest 运行
 
-- 将guest.sql导入  （存在resource目录下的）
+- **将guest.sql导入  （存在resource目录下的）**
 - 修改application中的数据库配置(用户名，密码，**端口号**)
 - 直接运行即可
 
-> 数据库版本请用  5.X.X 版本
+> **数据库版本请用  5.X.X 版本**
 >
 > 后端运行成功后可直接访问swagger文档：http://localhost:80/swagger-ui.html
 >
