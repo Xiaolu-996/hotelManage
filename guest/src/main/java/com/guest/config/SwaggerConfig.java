@@ -21,14 +21,14 @@ import java.util.List;
  *  接口地址：http://localhost:80/swagger-ui.html
  * </p>
  *
- * @author 张雪萍
+ * @author 路建彬
  * @since 2020-11-27
  */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
     //作者信息
-    Contact contact = new Contact("张雪萍","","zhangxueping21@foxmail.com");
+    Contact contact = new Contact("路建彬","","jianbin.lu@foxmail.com");
     //配置Swagger的Docket的bean实例
 
     @Bean
