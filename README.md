@@ -25,7 +25,7 @@
 
 - **将guest.sql导入  （存在resource目录下的）**
 - 修改application.yaml中的数据库配置(用户名，密码，端口号)
-- ![MySQL](https://s2.loli.net/2023/03/22/VNq95vFDs3QocE4.png)
+ ![MySQL](https://s2.loli.net/2023/03/22/VNq95vFDs3QocE4.png)
 - 直接运行即可
 
 > **数据库版本请用  5.6.X 版本**
